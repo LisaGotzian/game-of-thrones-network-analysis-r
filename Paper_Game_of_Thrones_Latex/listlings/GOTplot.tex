@@ -1,0 +1,25 @@
+\begin{lstlisting}[caption={Creating the plot of all characters.}, label={lstlisting:plot}] 
+### Creating the final plot
+plot(GOTgraph, edge.color=E(GOTgraph)$Type,# step 1: positive edges and negative edges get different colors
+     vertex.color = V(GOTgraph)$Deadcolor, # step 2: dead characters become grey
+     vertex.label.color = V(GOTgraph)$Deadcolor, # step 2
+     edge.width = E(GOTgraph)$weightadj/3, # step 3: edges become thicker if two characters know each other better
+     
+     vertex.size = 1, #step 4: the nodes as such become small,...
+     vertex.label.cex = log(GOTnodestrength)/5, # step 4 .... only the names become bigger based on their degree times the edge weights. The label size has been scaled by taking the natural logarithm of half the degree. This way, the small nodes don't diminish.
+     vertex.label.dist = 1, # step 4, to have the labels next to the node
+     
+     mark.groups = GOTcluster, # step 5: mark the clusters
+     mark.col = gray.colors(12, start = 0.6, alpha = 0.1), mark.border = NA, # step 5
+     
+     layout = GOTcoord, asp=0, #step 6,
+     # with the coordinates by hand from tkplot() and without an aspect ratio
+     
+     ### Some layout adjustments
+     vertex.frame.color = NA, # remove the frame from the vertex
+     edge.curved = TRUE, # curved edges
+     main = "A Game of Networks", # add a title
+     sub = "Network of Game of Thrones Characters based on the first season of the series.
+     Grey names depict dead characters by season 7.") 
+# View this graph in the zoomed plot window and pull it to full size. The aspect ratio has been removed. 
+\end{lstlisting}
