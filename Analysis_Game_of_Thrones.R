@@ -50,9 +50,9 @@ for (i in 1:observations){
 
 
 ### 1b. Add node attributes: if the character is dead, the node is white.
-# fwrite(as.list(V(GOTgraph)), file = "GOTnodes.csv") # export the vertex list, add the dead/alive
+# fwrite(as.list(V(GOTgraph)), file = "GOT_nodes.csv") # export the vertex list, add the dead/alive
 ## status and...
-GOTdead <- read.csv2("GOTnodesdead.csv") # ... import the new list.
+GOTdead <- read.csv2("GOT_nodesdead.csv") # ... import the new list.
 sum(GOTdead$Dead)/nrow(GOTdead) # only 37% of the characters introduced in season 1 are alive
 # in season 7.
 
