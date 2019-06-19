@@ -272,7 +272,7 @@ ggplot(GOTcomparisonrank15m, aes(x=as.numeric(variable), y=value, fill=Names, co
   scale_colour_manual(values = cols, breaks = rev(names(cols)))+
   # specify the colors and the order of the legend (reversing it by rev())
   
-  scale_x_continuous(breaks = 1:9, labels = names(GOTcomparison))+ # specify the x axis
+  scale_x_continuous(breaks = 1:length(GOTcomparison), labels = names(GOTcomparison))+ # specify the x axis
   scale_y_log10() + # log scale to have a better comparison
   ggtitle("Comparison of the different local measures")+
   xlab("Measure") + ylab("Rank")+
