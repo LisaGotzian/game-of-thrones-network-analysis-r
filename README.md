@@ -8,7 +8,7 @@ For `Analysis_Game_of_Thrones.R` to work, you need:
 - `GOT_nodesdead.csv` as the vector of nodes with a 0/1 if they are dead/alive
 - `GOT_coord.RDS`, the coordinates where I arranged the nodes in the final plot to be
 
-The main plot in `Analysis_Game_of_Thrones.R` visualizes strength of relationships (# of encounters), quality (+/-), overall importance of the character as well as social clusters. The network analysis furthermore looks at the most important and central characters based on different centrality measures. `Paper_Game_of_Thrones.pdf` relates this point to quality of relationships. This reveals that the most central characters tend to result in having more negative relationships (possibly due to envy and the competition around "the Game of Thrones") and tend to die if not acting too diplomatically. This pattern can especially be observed in later seasons as well.
+The main plot in `Analysis_Game_of_Thrones.R` visualizes strength of relationships (# of encounters), quality (+/-), overall importance of the character as well as social clusters. The network analysis furthermore looks at the most important and central characters based on different centrality measures. `Paper_Game_of_Thrones.pdf` relates this point to quality of relationships. This reveals that the most central characters tend to result in having more negative relationships (possibly due to envy and the competition around the throne) and tend to die if not acting too diplomatically. This pattern can especially be observed in later seasons as well.
 
 Said **main plot** looks like this in spoiler-free: ![plot](graphs/GOT_network_spoilfree.png)
 
