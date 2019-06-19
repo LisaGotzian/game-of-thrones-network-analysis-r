@@ -23,8 +23,8 @@ library(dichromat) # for colourblind accessibility
 
 # Please make sure to have the following files in your current working directory:
 # * GOT_network.csv
-# * GOTnodesdead.csv
-# * GOTcoord.RDS
+# * GOT_nodesdead.csv
+# * GOT_coord.RDS
 
 #---------------------------- The data ------------------------------
 GOTdata <- read.csv2("GOT_network.csv")
@@ -135,11 +135,11 @@ GOTclusterbetween <- cluster_edge_betweenness(GOTgraph, weights = E(GOTgraph)$we
 #             mark.groups = membership(GOTclusterbetween), # step 5
 #             mark.col = gray.colors(12, alpha = 0.2), mark.border = NA, layout = GOTcoord) # step 5
 # GOTcoord <- tk_coords(13)
-# saveRDS(GOTcoord, file="GOTcoord")
+# saveRDS(GOTcoord, file="GOT_coord.RDS")
 # GOTcanvas <- tk_canvas(13)
 # tk_close(13)
 
-GOTcoord <- readRDS("GOTcoord") # this reads in the coordinates determined above
+GOTcoord <- readRDS("GOT_coord.RDS") # this reads in the coordinates determined above
 
 ### 1g. Creating the final plot
 plot(GOTgraph, edge.color=E(GOTgraph)$Type,# step 1: positive edges and negative edges get different colors
